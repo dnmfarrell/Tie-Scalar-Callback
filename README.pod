@@ -8,9 +8,11 @@ Tie::Scalar::Callback - a tied scalar which executes a callback everytime it is 
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
+
+  use Tie::Scalar::Callback;
 
   # this coderef doubles the scalar's value everytime it's fetched 
   my $coderef = sub {

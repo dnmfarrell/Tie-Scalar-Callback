@@ -37,6 +37,8 @@ sub DESTROY {
 
 =head1 SYNOPSIS
 
+  use Tie::Scalar::Callback;
+
   # this coderef doubles the scalar's value everytime it's fetched 
   my $coderef = sub {
     my ($self, $event, $val) = @_;
