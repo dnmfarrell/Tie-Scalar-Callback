@@ -79,7 +79,7 @@ Called anytime a value is assigned to the scalar.
 
 Called anytime the scalar's value is retrieved.
 
-=item* DESTROY ($self, 'DESTROY')
+=item * DESTROY ($self, 'DESTROY')
 
 Called on object destruction.
 
