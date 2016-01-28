@@ -39,7 +39,7 @@ sub DESTROY {
 
   use Tie::Scalar::Callback;
 
-  # this coderef doubles the scalar's value everytime it's fetched 
+  # this coderef doubles the scalar's value everytime it's fetched
   my $coderef = sub {
     my ($self, $event, $val) = @_;
 
@@ -92,8 +92,8 @@ See the synopsis for an example coderef which handles these events.
 =head1 INTERNALS
 
 C<Tie::Scalar::Callback> objects are just anonymous hashes. The coderef is
-stored in C<$self->{sub}> and the current value of the scalar in
-C<$self->{val}>.
+stored in C<< $self->{sub} >> and the current value of the scalar in
+C<< $self->{val} >>.
 
 =head1 SEE ALSO
 
