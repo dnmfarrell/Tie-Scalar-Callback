@@ -8,7 +8,7 @@ Tie::Scalar::Callback - a tied scalar which executes a callback everytime it is 
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -70,10 +70,27 @@ C<Tie::Scalar::Callback> objects are just anonymous hashes. The coderef is
 stored in C<< $self->{sub} >> and the current value of the scalar in
 C<< $self->{val} >>.
 
+=head1 ACKNOWLEDGEMENTS
+
+Thanks to L<brian d foy|https://metacpan.org/author/BDFOY> for coming up with the idea for this module.
+
 =head1 SEE ALSO
 
+=over 4
+
+=item *
+
+L<Tie::Scalar::Cycle|https://metacpan.org/pod/Tie::Scalar::Cycle>
+
+=item *
+
 L<Tie::Scalar::Decay|https://metacpan.org/pod/Tie::Scalar::Decay>
+
+=item *
+
 L<Tie::Scalar::Ratio|https://metacpan.org/pod/Tie::Scalar::Ratio>
+
+=back
 
 =head1 AUTHOR
 
