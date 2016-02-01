@@ -8,7 +8,7 @@ Tie::Scalar::Callback - a tied scalar which executes a callback everytime it is 
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -80,7 +80,7 @@ Thanks to L<brian d foy|https://metacpan.org/author/BDFOY> for coming up with th
 
 =item *
 
-L<Tie::Scalar::Cycle|https://metacpan.org/pod/Tie::Scalar::Cycle>
+L<Tie::Cycle|https://metacpan.org/pod/Tie::Cycle>
 
 =item *
 

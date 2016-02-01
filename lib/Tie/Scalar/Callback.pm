@@ -105,7 +105,7 @@ Thanks to L<brian d foy|https://metacpan.org/author/BDFOY> for coming up with th
 
 =item *
 
-L<Tie::Scalar::Cycle|https://metacpan.org/pod/Tie::Scalar::Cycle>
+L<Tie::Cycle|https://metacpan.org/pod/Tie::Cycle>
 
 =item *
 
