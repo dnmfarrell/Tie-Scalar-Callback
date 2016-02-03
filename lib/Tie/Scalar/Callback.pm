@@ -53,8 +53,25 @@ C<Tie::Scalar::Callback> is a class for creating tied scalars which execute
 a callback everytime an event occurs on the scalar. The callback's return
 value becomes the scalar's apparent value.
 
+=head1 ACKNOWLEDGEMENTS
+
+Thanks to L<brian d foy|https://metacpan.org/author/BDFOY> for coming up with the idea for this module.
+
 =head1 SEE ALSO
 
+=over 4
+
+=item *
+
+L<Tie::Cycle|https://metacpan.org/pod/Tie::Cycle>
+
+=item *
+
 L<Tie::Scalar::Decay|https://metacpan.org/pod/Tie::Scalar::Decay>
+
+=item *
+
 L<Tie::Scalar::Ratio|https://metacpan.org/pod/Tie::Scalar::Ratio>
+
+=back
 
