@@ -1,5 +1,7 @@
+requires "Carp" => "0";
 requires "Tie::Scalar" => "0";
 requires "parent" => "0";
+requires "perl" => "v5.10.0";
 requires "strict" => "0";
 requires "warnings" => "0";
 
@@ -7,10 +9,12 @@ on 'test' => sub {
   requires "Test::Exception" => "0";
   requires "Test::More" => "0";
   requires "lib" => "0";
+  requires "perl" => "v5.10.0";
 };
 
 on 'configure' => sub {
   requires "ExtUtils::MakeMaker" => "0";
+  requires "perl" => "v5.10.0";
 };
 
 on 'develop' => sub {

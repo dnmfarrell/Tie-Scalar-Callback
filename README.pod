@@ -8,7 +8,7 @@ Tie::Scalar::Callback - a tied scalar which executes a callback everytime it is 
 
 =head1 VERSION
 
-version 0.06
+version 0.061
 
 =head1 SYNOPSIS
 
@@ -16,25 +16,13 @@ version 0.06
 
   # this coderef doubles the scalar's value everytime it's fetched
   my $coderef = sub {
-    my ($self, $event, $val) = @_;
-
-    if ($event eq 'STORE')
-    {
-      $self->{val} = $val;
-    }
-    elsif ($event eq 'FETCH')
-    {
-      my $old_val = $self->{val};
-      $self->{val} *= 2;
-      return $old_val;
-    }
-    else # DESTROY
-    {
-      undef $self;
+    state $value  = 1/2;
+    state $factor = 2;
+    $value *= $factor;
     }
   };
 
-  tie(my $doubler, 'Tie::Scalar::Callback', $coderef, 1);
+  tie(my $doubler, 'Tie::Scalar::Callback', $coderef);
 
   print $doubler; 1
   print $doubler; 2
@@ -43,32 +31,8 @@ version 0.06
 =head1 DESCRIPTION
 
 C<Tie::Scalar::Callback> is a class for creating tied scalars which execute
-a callback everytime an event occurs on the scalar. There are three types of
-event:
-
-=over 4
-
-=item * STORE ($self, 'STORE', $value)
-
-Called anytime a value is assigned to the scalar.
-
-=item * FETCH ($self, 'FETCH')
-
-Called anytime the scalar's value is retrieved.
-
-=item * DESTROY ($self, 'DESTROY')
-
-Called on object destruction.
-
-=back
-
-See the synopsis for an example coderef which handles these events.
-
-=head1 INTERNALS
-
-C<Tie::Scalar::Callback> objects are just anonymous hashes. The coderef is
-stored in C<< $self->{sub} >> and the current value of the scalar in
-C<< $self->{val} >>.
+a callback everytime an event occurs on the scalar. The callback's return
+value becomes the scalar's apparent value.
 
 =head1 ACKNOWLEDGEMENTS
 
@@ -94,7 +58,7 @@ L<Tie::Scalar::Ratio|https://metacpan.org/pod/Tie::Scalar::Ratio>
 
 =head1 AUTHOR
 
-David Farrell <dfarrell@cpan.org>
+['David Farrell <dfarrell@cpan.org>', 'brian d foy <bdfoy@cpan.org>']
 
 =head1 COPYRIGHT AND LICENSE
 

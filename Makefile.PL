@@ -2,20 +2,22 @@
 use strict;
 use warnings;
 
-
+use 5.010000;
 
 use ExtUtils::MakeMaker;
 
 my %WriteMakefileArgs = (
   "ABSTRACT" => "a tied scalar which executes a callback everytime it is used",
-  "AUTHOR" => "David Farrell <dfarrell\@cpan.org>",
+  "AUTHOR" => "['David Farrell <dfarrell\@cpan.org>', 'brian d foy <bdfoy\@cpan.org>']",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
   },
   "DISTNAME" => "Tie-Scalar-Callback",
   "LICENSE" => "open_source",
+  "MIN_PERL_VERSION" => "5.010000",
   "NAME" => "Tie::Scalar::Callback",
   "PREREQ_PM" => {
+    "Carp" => 0,
     "Tie::Scalar" => 0,
     "parent" => 0,
     "strict" => 0,
@@ -26,7 +28,7 @@ my %WriteMakefileArgs = (
     "Test::More" => 0,
     "lib" => 0
   },
-  "VERSION" => "0.06",
+  "VERSION" => "0.061",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -34,6 +36,7 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "Carp" => 0,
   "Test::Exception" => 0,
   "Test::More" => 0,
   "Tie::Scalar" => 0,
