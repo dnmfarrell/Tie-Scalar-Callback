@@ -8,7 +8,7 @@ Tie::Scalar::Callback - a tied scalar which executes a callback everytime it is 
 
 =head1 VERSION
 
-version 0.061
+version 0.062
 
 =head1 SYNOPSIS
 
@@ -16,9 +16,9 @@ version 0.061
 
   # this coderef doubles the scalar's value everytime it's fetched
   my $coderef = sub {
-    state $value  = 1/2;
-    state $factor = 2;
-    $value *= $factor;
+  	state $value  = 1/2;
+  	state $factor = 2;
+  	$value *= $factor;
     }
   };
 
@@ -58,7 +58,7 @@ L<Tie::Scalar::Ratio|https://metacpan.org/pod/Tie::Scalar::Ratio>
 
 =head1 AUTHOR
 
-['David Farrell <dfarrell@cpan.org>', 'brian d foy <bdfoy@cpan.org>']
+David Farrell <dfarrell@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

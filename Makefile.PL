@@ -8,7 +8,7 @@ use ExtUtils::MakeMaker;
 
 my %WriteMakefileArgs = (
   "ABSTRACT" => "a tied scalar which executes a callback everytime it is used",
-  "AUTHOR" => "['David Farrell <dfarrell\@cpan.org>', 'brian d foy <bdfoy\@cpan.org>']",
+  "AUTHOR" => "David Farrell <dfarrell\@cpan.org>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
   },
@@ -28,7 +28,7 @@ my %WriteMakefileArgs = (
     "Test::More" => 0,
     "lib" => 0
   },
-  "VERSION" => "0.061",
+  "VERSION" => "0.062",
   "test" => {
     "TESTS" => "t/*.t"
   }
