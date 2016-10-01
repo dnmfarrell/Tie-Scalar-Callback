@@ -63,6 +63,10 @@ Thanks to L<brian d foy|https://metacpan.org/author/BDFOY> for coming up with th
 
 =item *
 
+L<Tie::Simple|https://metacpan.org/pod/Tie::Simple>
+
+=item *
+
 L<Tie::Cycle|https://metacpan.org/pod/Tie::Cycle>
 
 =item *
@@ -74,4 +78,3 @@ L<Tie::Scalar::Decay|https://metacpan.org/pod/Tie::Scalar::Decay>
 L<Tie::Scalar::Ratio|https://metacpan.org/pod/Tie::Scalar::Ratio>
 
 =back
-
